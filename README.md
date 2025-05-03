@@ -31,30 +31,7 @@ The application is a **Student Management System**, where users can:
 
 ## Getting Started
 
-To run the app locally:
-
-1. **SBuild the container manually:**
-
-   ```bash
-   docker build . -t basic-sprin
-
-2. **Run the database and server together:**
-   
-   ```bash
-   docker-compose -f docker-compose-local.yml up --force-recreate
-
-## Alternative way to run the app
-
-1. **Start the database using Docker Compose:**
-
-   ```bash
-   docker-compose up
-
-2. **Run the application:**
-
-Open your IDE and run the BasicApplication.java file (the main entry point).
-
-## Third Method (with Testing)
+## Main method
 
 To run the app with testing support:
 
@@ -68,7 +45,38 @@ To run the app with testing support:
    ```bash
    docker kill $(docker ps -q)
 
-# Testing
+## View app
+After app started use http://localhost:8080/swagger-ui.html#/ to view API routes
+
+## Authentication
+Use the signup routes to register an account, then use the token you received in return by clicking the "Authorize" button in the menu bar. Enter the value "Bearer {your_token}" to be granted access to the APIs.
+
+# Alternative methods (unavailable for windows for now)
+## Alternative method 1
+
+1. **SBuild the container manually:**
+
+   ```bash
+   docker build . -t basic-sprin
+
+2. **Run the database and server together:**
+
+   ```bash
+   docker-compose -f docker-compose-local.yml up --force-recreate
+
+## Alternative method 2
+
+1. **Start the database using Docker Compose:**
+
+   ```bash
+   docker-compose up
+
+2. **Run the application:**
+
+Open your IDE and run the BasicApplication.java file (the main entry point).
+
+
+# Testing (for main method only)
 
 1. Run the following to wait for the server to be ready:
    ```bash
