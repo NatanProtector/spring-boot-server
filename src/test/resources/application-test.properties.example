@@ -1,0 +1,26 @@
+# Test profile configuration
+
+# Allow bean overriding (typically needed in test setups)
+spring.main.allow-bean-definition-overriding=true
+
+# H2 Database Configuration (for testing)
+spring.datasource.url=jdbc:h2:~/test;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=3;IGNORECASE=TRUE;AUTO_SERVER=TRUE
+spring.datasource.username=<test-db-username>
+spring.datasource.password=<test-db-password>
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.strategy=EMBEDDED
+
+# JPA / Hibernate (for test schema generation)
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+# AWS Credentials (for test purposes — use dummy/test keys)
+amazon.aws.accesskey=<test-aws-access-key>
+amazon.aws.secretkey=<test-aws-secret-key>
+bucket.url=<test-s3-bucket-url>
+
+# SMS4Free (mock or test credentials)
+sms4free.key=<test-sms-api-key>
+sms4free.user=<test-sms-user>
+sms4free.password=<test-sms-password>

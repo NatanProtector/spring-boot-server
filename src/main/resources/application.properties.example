@@ -1,0 +1,20 @@
+# Database Configuration
+spring.datasource.url=jdbc:postgresql://<host>:<port>/<dbname>
+spring.datasource.username=<your-db-username>
+spring.datasource.password=<your-db-password>
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA / Hibernate Configuration
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+# AWS Credentials (Do NOT commit real keys)
+amazon.aws.accesskey=<your-aws-access-key>
+amazon.aws.secretkey=<your-aws-secret-key>
+bucket.url=<your-s3-bucket-url>
+
+# SMS4Free credentials (Do NOT commit real credentials)
+sms4free.key=<your-sms-api-key>
+sms4free.user=<your-phone-or-username>
+sms4free.password=<your-sms-api-password>
